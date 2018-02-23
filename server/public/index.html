@@ -13,7 +13,7 @@
     <h1>GIPHY</h1>
     <section ng-controller="SearchController as vm">
       <input ng-model="searchBar" type="text" placeholder ="searchBox">
-      <button ng-model="submitSearchButton">Search</button>
+      <button ng-model="submitSearchButton" ng-click="vm.searchGiphy(searchBar)">Search</button>
       <div class = "searchDisplay">
       </div>
     </section>
