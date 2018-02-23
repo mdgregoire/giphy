@@ -6,30 +6,32 @@ const pool = require('../modules/pool');
 router.get('/', (request, response) => {
     console.log('Inside the GET');
     // Below, fill out queryText once database is decided
-    const quertText = ``;
-    pool.query(quertText)
+    const queryText = `SELECT * FROM gifs`;
+    pool.query(queryText)
         .then((result) => {
-            res.send(result.rows);
+            response.send(result.rows);
+            console.log(result.rows, 'in get router');
         })
-        .catch((err) => {
+        .catch((error) => {
             console.log('Cannot GET!');
-            res.sendStatus(500);
+            response.sendStatus(500);
         })
 })
 // End the GET
 
 // Start the POST
 router.post('/', (request, response) => {
-    console.log('POSTing req.body', req.body);
+    console.log('POSTing req.body', request.body);
     // Below, fill out queryText once database is decided
-    const quertText = ``;
-    pool.query(quertText, [req.body.image])
+    const queryText = `INSERT INTO gifs (url)
+                        VALUES ($1)`;
+    pool.query(queryText, [request.body.gif])
     .then((result) => {
-        res.sendStatus(201);
+        response.sendStatus(201);
     })
-    .catch((err) => {
-        console.log('Cannot POST', err);
-        res.sendStatus(500);
+    .catch((error) => {
+        console.log('Cannot POST', error);
+        response.sendStatus(500);
     })
 })
 // End the POST

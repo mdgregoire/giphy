@@ -15,13 +15,23 @@
     <section ng-controller="SearchController as vm">
       <input ng-model="searchBar" type="text" placeholder ="searchBox">
       <button ng-model="submitSearchButton" ng-click="vm.searchGiphy(searchBar, 0)">Search</button>
-      <!-- <button ng-model="saveButton" ng-click="vm.saveButton({{vm.searchOut}})" -->
 
+
+
+
+
+      <button ng-model="saveButton" ng-click="vm.saveClick(vm.searchOut)">SAVE</button>
+      <button ng-model="displayFavorites" ng-click="vm.displayFavs()">Display Favorites</button>
       <div class = "searchDisplay">
+
         <button ng-click="vm.prevButton(searchBar)">Previous</button>
         <img ng-src="{{vm.searchOut}}"></img>
         <button ng-click="vm.nextButton(searchBar)">Next</button>
       </div>
+
+      <section ng-repeat="gif in vm.favArray">
+        <img ng-src="{{gif.url}}"/>
+      </section>
 
     </section>
     <section ng-controller="RandomController as vm">
