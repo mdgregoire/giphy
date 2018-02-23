@@ -7,9 +7,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); // NEEDED FOR ANGULARJS
 app.use(express.static('server/public'));
 
-// Add our router 
-const giphyRouter = require('./routers/giphy-router');
-app.use('/giphy', giphyRouter);
+// Add our router
+// const giphyRouter = require('./routers/giphy-router');
+// app.use('/giphy', giphyRouter);
 
 let port = process.env.PORT || 5000;
 app.listen(port, function () {
