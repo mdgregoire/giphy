@@ -2,9 +2,10 @@ const app = angular.module('myApp',[])
 const apiKey = 'KsGqHnc5Rp9pURi4iIEBX4ILYTzvv39L';
 const giphyURL = 'https://api.giphy.com/v1/gifs';
 
+
 const SearchController = app.controller('SearchController', ['$http', function($http){
   let self = this;
-
+  self.searchOut = '';
 
   self.searchGiphy = function (searchBar){
     console.log(searchBar);
@@ -14,7 +15,8 @@ const SearchController = app.controller('SearchController', ['$http', function($
     })
     .then(function(response){
       console.log('success in search', response);
-
+      console.log(response.data.data[0].images.downsized.url, 'giflink');
+      self.searchOut = response.data.data[0].images.downsized.url;
     })
     .catch(function(error){
       console.log('error in search', error);

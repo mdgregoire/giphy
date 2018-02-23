@@ -15,6 +15,7 @@
       <input ng-model="searchBar" type="text" placeholder ="searchBox">
       <button ng-model="submitSearchButton" ng-click="vm.searchGiphy(searchBar)">Search</button>
       <div class = "searchDisplay">
+        <img ng-src="{{vm.searchOut}}"></img>
       </div>
     </section>
     <section ng-controller="RandomController as vm">
