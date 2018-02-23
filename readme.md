@@ -2,8 +2,8 @@
 Let's use the Giphy API and use Angular's $http service to create a fun application. Before you get started, you'll need to read through the Giphy documentation to determine which endpoints you need to complete this app. You will also need to register an account in order to get your API Key. This key is used for all of your requests to authenticate your app to Giphy.
 
 ## Base Mode
-- [ ] Front End From Scratch
-- [ ] Controller 1 for Search
+- [x] Front End From Scratch
+- [] Controller 1 for Search
     - [ ] Create useable forms with inputs that use /search
     - [ ] Allow users to input text and click Search button
 - [ ] Controller 2 for Random
