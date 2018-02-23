@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app = "myApp">
   <head>
     <meta charset="utf-8">
     <title>GIPHY</title>
@@ -11,5 +11,16 @@
   </head>
   <body>
     <h1>GIPHY</h1>
+    <section ng-controller="SearchController as vm">
+      <input ng-model="searchBar" type="text" placeholder ="searchBox">
+      <button ng-model="submitSearchButton">Search</button>
+      <div class = "searchDisplay">
+      </div>
+    </section>
+    <section ng-controller="RandomController as vm">
+      <button ng-model="randomButton">Random .gif</button>
+      <div class = "randomDisplay">
+      </div>
+    </section>
   </body>
 </html>
