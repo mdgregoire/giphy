@@ -1,4 +1,7 @@
-const app = angular.module('myApp',[])
+const app = angular.module('myApp',['angularUtils.directives.dirPagination'])
+
+
+
 const apiKey = 'KsGqHnc5Rp9pURi4iIEBX4ILYTzvv39L';
 const giphyURL = 'https://api.giphy.com/v1/gifs';
 
@@ -45,7 +48,6 @@ self.prevButton = function (searchBar){
 }//end nextButton
 
 
-  console.log('inside SearchController');
 }]);//end SearchController
 
 

@@ -13,15 +13,15 @@ Let's use the Giphy API and use Angular's $http service to create a fun applicat
 - [ ] Hide other image on click
 
 ## HARD Mode
-- [ ] Add Previous and Next Buttons for search results
-- [ ] Clicking previous and next shows us different images, coressponding to pagination info
+- [x] Add Previous and Next Buttons for search results
+- [x] Clicking previous and next shows us different images, coressponding to pagination info
 
 /Search results in Giphy have a Pagination Object -- Let's use this! Add Previous and Next buttons for the search results. Clicking previous and next should show us different images, corresponding to the pagination information. You will need to read and understand what Pagination is telling you, and how to add it to your request!
 
 ## PRO Mode
 - [ ] Create server and structure for repo
     - [ ] Create SQL database and include it in repo
-- [ ] Create third conroller that is responsible for displaying only favorites
+- [ ] Create third controller that is responsible for displaying only favorites
 - [ ] Save user favorites to SQL database
 
 Make a way to save the user's favorite images in both random and search. Save user favorites in a SQL database. Add a new controller-- it should be responsible for displaying only the favorited images. Remember to include a database.sql file with your table create code!
