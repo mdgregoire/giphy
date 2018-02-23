@@ -21,10 +21,8 @@ const SearchController = app.controller('SearchController', ['$http', function($
     .catch(function(error){
       console.log('error in search', error);
     })
-  }//end searchGiphy
-
-
-
+  }
+  //end searchGiphy
 
   console.log('inside SearchController');
 }]);//end SearchController
@@ -32,6 +30,22 @@ const SearchController = app.controller('SearchController', ['$http', function($
 
 const RandomController = app.controller('RandomController', ['$http', function($http){
   let self = this;
+  self.randomOut = '';
 
-  console.log('inside RandomController');
+  self.randomGiphy = function (){
+    console.log('inrandom');
+    $http({
+      method: 'GET',
+      url: `${giphyURL}/random?api_key=${apiKey}`
+    })
+    .then(function(response){
+      console.log('success in random', response);
+      console.log(response.data.data.images.downsized.url, 'giflink');
+      self.randomOut = response.data.data.images.downsized.url;
+    })
+    .catch(function(error){
+      console.log('error in random', error);
+    })
+  }//end searchGiphy
+
 }]);//end SearchController

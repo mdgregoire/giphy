@@ -19,9 +19,10 @@
       </div>
     </section>
     <section ng-controller="RandomController as vm">
-      <button ng-model="randomButton">Random .gif</button>
       <div class = "randomDisplay">
+        <img ng-src="{{vm.randomOut}}"></img>
       </div>
+      <button ng-model="randomButton" ng-click="vm.randomGiphy()">Random .gif</button>
     </section>
   </body>
 </html>
